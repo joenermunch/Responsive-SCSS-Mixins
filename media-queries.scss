@@ -1,0 +1,46 @@
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$extra-large-screen: 1200px;
+
+@mixin small-screen {
+  @media (min-width: $small-screen) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media (min-width: $medium-screen) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media (min-width: $large-screen) {
+    @content;
+  }
+}
+
+@mixin extra-large-screen {
+  @media (min-width: $extra-large-screen) {
+    @content;
+  }
+}
+
+/* Usage */
+
+.selector {
+  /* styles for small screens */
+  @include small-screen {
+    /* additional styles for small screens and up */
+  }
+  @include medium-screen {
+    /* additional styles for medium screens and up */
+  }
+  @include large-screen {
+    /* additional styles for large screens and up */
+  }
+  @include extra-large-screen {
+    /* additional styles for extra large screens */
+  }
+}
